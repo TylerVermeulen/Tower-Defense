@@ -6,44 +6,51 @@ using UnityEngine.EventSystems;
 public class Drag : MonoBehaviour 
 {
     private Transform Location;
-    private bool isdragging;
-
+    public bool canPlace = false;
+    public GameObject draggedholder;
+    public SummonTower summontower;
     private void OnMouseDown()
     {
-        if (isdragging == true)
+
+
+        if (canPlace && Input.mousePosition.x > 249f)
         {
-            isdragging = false;
+
+            Debug.Log("click op de toren");
+                Suicide();           
+
         }
-        else if (isdragging == false)
-        {
-            isdragging = true;
-        }
-        
     }
     private void OnMouseUp()
     {
-        if (transform.parent == null)
-        {
-            Destroy(this.gameObject);
-        }
+
     }
     public void OnMouseDrag()
     {
         
     }
     
-
-    void Awake()
+    public void Suicide()
     {
-        isdragging = true;
+        summontower.isplacingtower = false; 
+        this.enabled = false;
+      
+    }
+    void Start()
+    {
+
     }
 
     void Update()
     {
-        if (isdragging == true)
+        if (summontower.isplacingtower/* && !hasbeenplaced*/)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            transform.Translate(mousePosition);
+            
+                //this.transform.parent = draggedholder.transform;
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                transform.Translate(mousePosition);
+             
+            
         }  
     }
 }
