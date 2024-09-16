@@ -7,7 +7,7 @@ public class Drag : MonoBehaviour
 {
     private Transform Location;
     public bool canPlace = false;
-    public GameObject draggedholder;
+   
     public SummonTower summontower;
     private void OnMouseDown()
     {
@@ -15,42 +15,28 @@ public class Drag : MonoBehaviour
 
         if (canPlace && Input.mousePosition.x > 249f)
         {
-
-            Debug.Log("click op de toren");
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0.5f);
+        
+        Debug.Log("click op de toren");
                 Suicide();           
 
         }
     }
-    private void OnMouseUp()
-    {
 
-    }
-    public void OnMouseDrag()
-    {
-        
-    }
-    
     public void Suicide()
     {
         summontower.isplacingtower = false; 
         this.enabled = false;
       
     }
-    void Start()
-    {
-
-    }
 
     void Update()
     {
-        if (summontower.isplacingtower/* && !hasbeenplaced*/)
+        if (summontower.isplacingtower)
         {
-            
-                //this.transform.parent = draggedholder.transform;
-                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                transform.Translate(mousePosition);
-             
-            
-        }  
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -1f);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePosition);
+        }
     }
 }
