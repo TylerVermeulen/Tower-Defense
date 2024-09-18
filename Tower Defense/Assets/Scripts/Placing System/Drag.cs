@@ -8,7 +8,7 @@ public class Drag : MonoBehaviour
     private Transform Location;
     public bool canPlace = false;
    
-    public SummonTower summontower;
+    public TowerSpawner summontower;
     private void OnMouseDown()
     {
 
