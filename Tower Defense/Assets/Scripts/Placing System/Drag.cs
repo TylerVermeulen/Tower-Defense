@@ -8,7 +8,7 @@ public class Drag : MonoBehaviour
     private Transform Location;
     public bool canPlace = false;
    
-    public TowerSpawner summontower;
+    public TowerSpawner towerSpawner;
     private void OnMouseDown()
     {
 
@@ -25,14 +25,14 @@ public class Drag : MonoBehaviour
 
     public void Suicide()
     {
-        summontower.isplacingtower = false; 
+        towerSpawner.isplacingtower = false; 
         this.enabled = false;
       
     }
 
     void Update()
     {
-        if (summontower.isplacingtower)
+        if (towerSpawner.isplacingtower)
         {
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -1f);
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

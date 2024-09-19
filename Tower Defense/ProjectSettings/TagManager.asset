@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tower
   - Dropzone
+  - Final Area
+  - Enemy
   layers:
   - Default
   - TransparentFX

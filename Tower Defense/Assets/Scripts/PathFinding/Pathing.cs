@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,15 @@ using UnityEngine;
 public class Pathing : MonoBehaviour
 {
     public GameObject path;
-    public GameObject healthsystem;
+    private int damage;
+    public static event Action<int> onReachedEnd;
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float movespeed;
     private int waypointindex;
     // Start is called before the first frame update
     void Start()
     {
+        damage = this.GetComponent<EnemyStats>().damage;
         ApplyWaypoints();
         transform.position = waypoints[waypointindex].transform.position;
     }
@@ -31,13 +34,15 @@ public class Pathing : MonoBehaviour
             
             if (transform.position == waypoints[waypointindex].transform.position)
             {
-                if (waypointindex == waypoints.Length)
-                {
-
-                }
                 waypointindex++;
             }
-            
+            if (waypointindex == waypoints.Length)
+            {
+                Debug.Log("hey hey");
+                onReachedEnd?.Invoke(damage);
+                Destroy(this.gameObject);
+            }
+
         }
     }
     private void ApplyWaypoints()

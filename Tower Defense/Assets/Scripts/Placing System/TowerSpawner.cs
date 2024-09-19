@@ -14,7 +14,7 @@ public class TowerSpawner : MonoBehaviour
             Debug.Log("klik op menu");
             GameObject placedTower = Instantiate(towertype);
             Drag dscript = placedTower.GetComponent<Drag>();
-            dscript.summontower = this;
+            dscript.towerSpawner = this;
             dscript.canPlace = true;
             isplacingtower = true;
             
