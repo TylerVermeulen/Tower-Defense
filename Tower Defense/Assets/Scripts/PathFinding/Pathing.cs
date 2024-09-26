@@ -38,7 +38,6 @@ public class Pathing : MonoBehaviour
             }
             if (waypointindex == waypoints.Length)
             {
-                Debug.Log("hey hey");
                 onReachedEnd?.Invoke(damage);
                 Destroy(this.gameObject);
             }
