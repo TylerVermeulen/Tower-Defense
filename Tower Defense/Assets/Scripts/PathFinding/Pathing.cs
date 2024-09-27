@@ -10,7 +10,7 @@ public class Pathing : MonoBehaviour
     public static event Action<int> onReachedEnd;
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float movespeed;
-    private int waypointindex;
+    public int waypointindex;
     // Start is called before the first frame update
     void Start()
     {
