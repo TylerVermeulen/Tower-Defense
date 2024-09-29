@@ -26,8 +26,7 @@ public class HealthText : MonoBehaviour
     }
     public void LowerHealth(int damage)
     {
-        healthtext.text = (health - damage) + " HP";
         health -= damage;
-        Debug.Log(health);
+        healthtext.text = health.ToString();
     }
 }

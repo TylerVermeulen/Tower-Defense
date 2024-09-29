@@ -26,7 +26,7 @@ public class Drag : MonoBehaviour
         if (hits)           
         {
             Debug.Log("path");
-            if (hits.collider != null && hits.collider.name == "path")
+            if (hits.collider != null && hits.collider.name == "path" || hits.collider.name == "PlacedTower")
             {
                 Debug.Log("hit the path");
                 
@@ -48,7 +48,7 @@ public class Drag : MonoBehaviour
     public void Suicide()
     {
         towerSpawner.isplacingtower = false;
-        this.gameObject.layer = 6;
+        this.gameObject.layer = 7;
         this.enabled = false;
       
     }
