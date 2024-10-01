@@ -23,6 +23,7 @@ public class Drag : MonoBehaviour
 
         //mousePos, new Vector3(0, 0, 1), out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("Path")))
         RaycastHit2D hits = Physics2D.Raycast(mousePos,Vector3.forward, Mathf.Infinity,LayerMask.GetMask("Path"));
+        RaycastHit2D hits2 = Physics2D.Raycast(mousePos, Vector3.forward, Mathf.Infinity, LayerMask.GetMask("T"));
         if (hits)           
         {
             Debug.Log("path");
