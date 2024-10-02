@@ -23,7 +23,7 @@ public class Drag : MonoBehaviour
 
         //mousePos, new Vector3(0, 0, 1), out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("Path")))
         RaycastHit2D hits = Physics2D.Raycast(mousePos,Vector3.forward, Mathf.Infinity,LayerMask.GetMask("Path"));
-        RaycastHit2D hits2 = Physics2D.Raycast(mousePos, Vector3.forward, Mathf.Infinity, LayerMask.GetMask("T"));
+        //RaycastHit2D hits2 = Physics2D.Raycast(mousePos, Vector3.forward, Mathf.Infinity, LayerMask.GetMask("T"));
         if (hits)           
         {
             Debug.Log("path");
@@ -35,7 +35,7 @@ public class Drag : MonoBehaviour
         }
         else {
             Debug.Log("no path");
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0.5f);
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -0.5f);
             Suicide();
         }
 
@@ -49,7 +49,7 @@ public class Drag : MonoBehaviour
     public void Suicide()
     {
         towerSpawner.isplacingtower = false;
-        this.gameObject.layer = 7;
+        this.gameObject.layer = 6;
         this.enabled = false;
       
     }
