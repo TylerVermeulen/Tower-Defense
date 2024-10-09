@@ -26,28 +26,26 @@ public class Drag : MonoBehaviour
         //RaycastHit2D hits2 = Physics2D.Raycast(mousePos, Vector3.forward, Mathf.Infinity, LayerMask.GetMask("T"));
         if (hits)           
         {
-            Debug.Log("path");
+            
             if (hits.collider != null && hits.collider.name == "path" || hits.collider.name == "PlacedTower")
             {
-                Debug.Log("hit the path");
+               
                 
             }
         }
         else {
-            Debug.Log("no path");
+            
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -0.5f);
             Suicide();
         }
 
-        if (canPlace && Input.mousePosition.x > 249f)
-        {
-                       
 
-        }
     }
 
     public void Suicide()
     {
+        this.gameObject.GetComponent<EnemyTargeting>().enabled = true;
+        this.gameObject.GetComponent<ShootAtTarget>().enabled = true;
         towerSpawner.isplacingtower = false;
         this.gameObject.layer = 6;
         this.enabled = false;

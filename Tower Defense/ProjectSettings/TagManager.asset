@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tower
-  - Dropzone
   - Final Area
   - Enemy
+  - bullet
   layers:
   - Default
   - TransparentFX

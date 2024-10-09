@@ -6,6 +6,7 @@ using System;
 public class EnemyStats : MonoBehaviour
 {
     public int damage;
+    public int health;
     
 
 }

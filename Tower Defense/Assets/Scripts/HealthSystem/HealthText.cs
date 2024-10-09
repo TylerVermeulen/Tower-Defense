@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class HealthText : MonoBehaviour
 {
     
-    public int health;
+    [SerializeField]private int health;
     [SerializeField] TextMeshProUGUI healthtext;
     // Start is called before the first frame update
     void Start()
