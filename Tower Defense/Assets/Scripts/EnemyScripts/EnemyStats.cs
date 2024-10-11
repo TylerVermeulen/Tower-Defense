@@ -5,7 +5,17 @@ using System;
 
 public class EnemyStats : MonoBehaviour
 {
-    public int damage;
-    
+    [SerializeField]private int damage;
+    [SerializeField]private int health;
+    public int Health {
+        get { return health; }
+        set { health = value; }
+
+    }
+    public int Damage
+    {
+        get { return damage; }
+        set { damage = value; }
+    }
 
 }

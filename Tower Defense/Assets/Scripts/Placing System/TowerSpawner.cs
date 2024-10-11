@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
-    public bool isplacingtower = false;
+    private bool isplacingtower = false;
 
+    public bool Isplacingtower
+    {
+        get { return isplacingtower; }
+        set { isplacingtower = value; }
+        }
     public void OnButtonClick(GameObject towertype)
     {
         if (!isplacingtower)
         {
-
-            Debug.Log("klik op menu");
             GameObject placedTower = Instantiate(towertype);
             Drag dscript = placedTower.GetComponent<Drag>();
-            dscript.towerSpawner = this;
-            dscript.canPlace = true;
+            dscript.TowerSpawner = this;
+            dscript.CanPlace = true;
             isplacingtower = true;
-            
-
         }
     }
 }
