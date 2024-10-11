@@ -5,16 +5,27 @@ using UnityEngine;
 
 public class Pathing : MonoBehaviour
 {
-    public GameObject path;
+    [SerializeField]private GameObject path;
     private int damage;
     public static event Action<int> onReachedEnd;
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float movespeed;
-    public int waypointindex;
+    private int waypointindex;
+
+    public GameObject Path
+    {
+        get { return path; }
+        set { path = value; }
+    }
+    public int Waypointindex
+    {
+        get { return waypointindex; }
+        set { waypointindex = value; }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        damage = this.GetComponent<EnemyStats>().damage;
+        damage = this.GetComponent<EnemyStats>().Damage;
         ApplyWaypoints();
         transform.position = waypoints[waypointindex].transform.position;
     }

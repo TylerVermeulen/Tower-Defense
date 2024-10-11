@@ -10,10 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1163346904268482667}
   - component: {fileID: 2821836331384926807}
+  - component: {fileID: 747235291811510085}
   - component: {fileID: -2389349231511599094}
+  - component: {fileID: 5358859661539108280}
   - component: {fileID: 8877372654567487520}
+  - component: {fileID: 3684356929300295930}
   m_Layer: 0
-  m_Name: Tower3
+  m_Name: DesertTowerPrefab
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.7461736, y: 1.5737646, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86,6 +89,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &747235291811510085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573237222675231481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825c7f637ee63f642b5ee7b79f54e6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 2441235621054014195, guid: fe565233127cdf142983850b7a011367, type: 3}
+  shootcooldown: 0.5
 --- !u!114 &-2389349231511599094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +120,21 @@ MonoBehaviour:
     m_Bits: 64
   canPlace: 0
   towerSpawner: {fileID: 0}
+--- !u!114 &5358859661539108280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573237222675231481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e26229667472c44bd6a38764436e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemiesInRange: []
+  target: {fileID: 0}
+  Bullet: {fileID: 2441235621054014195, guid: fe565233127cdf142983850b7a011367, type: 3}
 --- !u!61 &8877372654567487520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +180,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57, y: 0.63}
   m_EdgeRadius: 0
+--- !u!58 &3684356929300295930
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573237222675231481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2

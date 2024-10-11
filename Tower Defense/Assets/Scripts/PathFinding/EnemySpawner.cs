@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
 
             
         Instantiate(enemytype);
-        enemytype.GetComponent<Pathing>().path = path;
+        enemytype.GetComponent<Pathing>().Path = path;
             
 
     }
