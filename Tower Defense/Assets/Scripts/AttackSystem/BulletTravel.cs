@@ -6,7 +6,12 @@ public class BulletTravel : MonoBehaviour
 {
     internal GameObject target;
     [SerializeField] private float movespeed;
-    public int damage;
+    [SerializeField] private int damage;
+
+    public int Damage {
+        get { return damage; }
+       
+    }
 
     void Update()
     {
