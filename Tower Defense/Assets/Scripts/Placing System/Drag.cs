@@ -49,8 +49,7 @@ public class Drag : MonoBehaviour
         this.gameObject.layer = 6;
         this.enabled = false;
     }
-
-    void Update()
+    public void MoveTower()
     {
         if (towerSpawner.Isplacingtower)
         {
@@ -58,5 +57,9 @@ public class Drag : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
         }
+    }
+    void Update()
+    {
+        MoveTower();
     }
 }

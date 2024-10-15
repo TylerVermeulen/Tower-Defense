@@ -17,7 +17,6 @@ public class EnemyTargeting : MonoBehaviour
             EnemiesInRange.Add(collision.gameObject);
             target = EnemiesInRange[0];
         }
-        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -36,6 +35,5 @@ public class EnemyTargeting : MonoBehaviour
                 }
             }
         }
-
     }
 }
