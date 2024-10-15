@@ -18,6 +18,10 @@ public class EnemyAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckAnimation();
+    }
+    public void CheckAnimation()
+    {
         if (pathing.Waypointindex == 2 || pathing.Waypointindex == 14)
         {
             animator.ResetTrigger("walkforward");

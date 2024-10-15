@@ -19,14 +19,18 @@ public class HealthText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            SceneManager.LoadScene("Game Over Scene");
-        }
+        CheckIfDead();
     }
     public void LowerHealth(int damage)
     {
         health -= damage;
         healthtext.text = health.ToString();
+    }
+    public void CheckIfDead()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("Game Over Scene");
+        }
     }
 }

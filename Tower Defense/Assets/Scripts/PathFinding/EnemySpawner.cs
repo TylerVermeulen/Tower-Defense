@@ -7,12 +7,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject path;
 
     public void OnButtonClick(GameObject enemytype)
-    {
-
-            
+    {  
         Instantiate(enemytype);
         enemytype.GetComponent<Pathing>().Path = path;
-            
-
     }
 }

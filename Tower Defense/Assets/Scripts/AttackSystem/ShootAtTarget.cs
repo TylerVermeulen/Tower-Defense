@@ -20,7 +20,10 @@ public class ShootAtTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        ShouldIShoot(); 
+    }
+    public void ShouldIShoot()
+    {
         if (targeting.target != null)
         {
             if (!isshooting)
@@ -28,7 +31,6 @@ public class ShootAtTarget : MonoBehaviour
                 StartCoroutine(Shoot());
                 isshooting = true;
             }
-            
         }
         else
         {

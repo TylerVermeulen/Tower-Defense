@@ -15,6 +15,10 @@ public class BulletTravel : MonoBehaviour
 
     void Update()
     {
+        MoveBullet();
+    }
+    public void MoveBullet()
+    {
         if (target != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movespeed * Time.deltaTime);
@@ -23,6 +27,5 @@ public class BulletTravel : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
     }
 }
