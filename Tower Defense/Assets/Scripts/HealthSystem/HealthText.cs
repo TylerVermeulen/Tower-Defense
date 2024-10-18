@@ -7,15 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class HealthText : MonoBehaviour
 {
-    
     [SerializeField]private int health;
-    [SerializeField] TextMeshProUGUI healthtext;
+    [SerializeField]private TextMeshProUGUI healthtext;
     // Start is called before the first frame update
     void Start()
     {
         Pathing.onReachedEnd += LowerHealth;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -30,7 +28,7 @@ public class HealthText : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene("Game Over Scene");
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

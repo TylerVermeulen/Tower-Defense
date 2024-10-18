@@ -12,6 +12,11 @@ public class Pathing : MonoBehaviour
     [SerializeField] private float movespeed;
     private int waypointindex;
 
+    public int Damage
+    {
+        get { return damage; }
+        set { damage = value; }
+    }
     public GameObject Path
     {
         get { return path; }
@@ -25,7 +30,7 @@ public class Pathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damage = this.GetComponent<EnemyStats>().Damage;
+        Damage = this.GetComponent<EnemyStats>().Damage;
         ApplyWaypoints();
         transform.position = waypoints[waypointindex].transform.position;
     }
@@ -49,7 +54,7 @@ public class Pathing : MonoBehaviour
             }
             if (waypointindex == waypoints.Length)
             {
-                onReachedEnd?.Invoke(damage);
+                onReachedEnd?.Invoke(Damage);
                 Destroy(this.gameObject);
             }
 
