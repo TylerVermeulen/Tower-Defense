@@ -165,8 +165,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  movespeed: 1
-  waypointindex: 0
+  movespeed: 10
 --- !u!61 &3959508557584579962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff8928e69b305644b9596a76fd77544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   health: 25
 --- !u!114 &8369122123500248782
 MonoBehaviour:

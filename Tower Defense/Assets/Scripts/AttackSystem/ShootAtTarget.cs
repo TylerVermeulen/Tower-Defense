@@ -37,9 +37,8 @@ public class ShootAtTarget : MonoBehaviour
             isshooting = false;
         }
     }
-    public  IEnumerator Shoot()
+    private IEnumerator Shoot()
     {
-        
         while (targeting.target != null)
         {
             

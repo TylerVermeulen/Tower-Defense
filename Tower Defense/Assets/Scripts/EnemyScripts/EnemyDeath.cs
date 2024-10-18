@@ -9,7 +9,6 @@ public class EnemyDeath : MonoBehaviour
     void Start()
     {
         health = this.GetComponent<EnemyStats>().Health;
-        Debug.Log("health"+health);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,7 +16,6 @@ public class EnemyDeath : MonoBehaviour
 
         if (collision.tag == "bullet")
         {
-            Debug.Log("BulletTouched");
             health -= collision.GetComponent<BulletTravel>().Damage;
             Destroy(collision.gameObject);
             if (health <= 0)

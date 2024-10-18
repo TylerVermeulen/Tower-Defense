@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyAnimator : MonoBehaviour
 {
-    public Animator animator;
+    [SerializeField]private Animator animator;
     private Pathing pathing;
     
     // Start is called before the first frame update
