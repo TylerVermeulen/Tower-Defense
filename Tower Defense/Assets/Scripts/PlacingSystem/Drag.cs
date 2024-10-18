@@ -25,12 +25,10 @@ public class Drag : MonoBehaviour
     }
     private void TowerPlacement()
     {
-        Debug.Log("I click");
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hits = Physics2D.Raycast(mousePos, Vector3.forward, Mathf.Infinity, LayerMask.GetMask("Path"));
         if (hits)
         {
-            Debug.Log("I hit");
 
             if (hits.collider != null && hits.collider.name == "path" || hits.collider.tag == "Tower")
             {
@@ -39,7 +37,6 @@ public class Drag : MonoBehaviour
         }
         else
         {
-            Debug.Log("Else");
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -0.5f);
             Suicide();
         }
