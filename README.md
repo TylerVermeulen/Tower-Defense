@@ -39,12 +39,7 @@ Je maakt in Unity een stabiele “build” van je game waarbij bugs en logs eers
 
 ## Product 6: Game design met onderbouwing 
 
-Je gebruikt een game design tool om je game design vast te leggen en te communiceren. Daarnaast onderbouw je de design keuzes ten aanzien van “playability” en “replayability” voor je game schriftelijk. 
-
-Voorbeeld van een one page design:
-![](https://external-preview.redd.it/48mnMpA0TbiihGo4HsJiWrJhK72xeTRwV2o70_AKilw.jpg?auto=webp&s=3a1ae18f0e4fba7a465643987cbe9cf409466e53)
-
-Omschrijf per mechanic welke game design keuzes je hebt gemaakt en waarom je dit hebt gedaan.
+![Hier de link naar mijn Design Doc](/PlayabilityAndReplayability/README.MD)
 
 *  **Je game bevat torens die kunnen mikken en schieten op een bewegend doel.** 
 
@@ -82,56 +77,99 @@ Je brengt je volledige codebase in kaart met behulp van een class diagram. Binne
 
 ```mermaid
 ---
-title: Animal example
+title: Tower Defense
 ---
 classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
+TowerSpawner <.. Drag
+    EnemyStats <.. Pathing
+    EnemyStats <.. EnemyDeath
+    BulletTravel <.. EnemyDeath
+    BulletTravel <.. ShootAtTarget
+    Drag <.. TowerSpawner
+    Pathing <.. EnemyAnimator
+    Pathing <.. EnemySpawner
+    Pathing <.. HealthText
+    EnemyTargeting <.. ShootAtTarget
+    class TowerSpawner{
+        -bool isplacingtower
+        +OnButtonClick()
     }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
+     class Pathing{
+        -Gameobject path
+        -int waypointindex
+        -int damage
+        -float movespeed
+        -Transform[] waypoints
+        +onReachedEnd
+        -Move()
+        -ApplyWaypoints()
     }
-    class Zebra{
-        +bool is_wild
-        +run()
+     class EnemyStats{
+        -int health
+        -int damage
+    }
+    class Drag{
+        -bool canPlace
+        -TowerSpawner towerSpawner
+        -Transform Location
+        -LayerMask PathLayer
+        -Vector2 mousePosition
+        -TowerPlacement()
+        +Suicide()
+        +MoveTower()
+
+    }
+    class BulletTravel{
+        -int damage
+        -float movespeed
+        ~GameObject target
+        +MoveBullet()
+    }
+    class EnemyDeath{
+        -int health
+        -OnTriggerEnter2D()
+    }
+    class EnemyAnimator{
+        -Animator animator
+        -Pathing pathing
+        +CheckAnimation()
+    }
+    class HealthText{
+        -int health
+        -TextMeshProUGUI healthtext
+        +LowerHealth()
+        +CheckIfDead()
+    }
+    class EnemySpawner{
+        -GameObject path
+        +OnButtonClick()
+    }
+    class EnemyTargeting{
+        ~GameObject target
+        -GameObject Bullet
+        -List~GameObject~ EnemiesInRange
+        -OnTriggerEnter2D()
+        -OnTriggerExit2D()
+    }
+    class ShootAtTarget{
+        -GameObject Bullet
+        -EnemyTargeting targeting
+        -float shootcooldown
+        -bool isshooting
+        +ShouldIShoot()
+        -Shoot()
+    }
+    class GameOverScene{
+        +OnButtonClick()
     }
 
 ```
 
 ## Product 8: Prototype test video
-Je hebt een werkend prototype gemaakt om een idee te testen. Omschrijf if je readme wat het idee van de mechanics is geweest wat je wilde testen en laat een korte video van de gameplay test zien. 
-
-[![example test video](https://ucarecdn.com/dbdc3ad0-f375-40ad-8987-9e6451b28b50/)](https://www.youtube.com/watch?v=CzzRML1swF0)
 
 ## Product 9: SCRUM planning inschatting 
-
-Je maakt een SCRUM planning en geeft daarbij een inschatting aan elke userstory d.m.v storypoints / zelf te bepalen eenheden. (bijv. Storypoints, Sizes of tijd) aan het begin van een nieuwe sprint update je deze inschatting per userstory. 
-
-Plaats in de readme een link naar je trello en **zorg ervoor dat je deze openbaar maakt**
 
 [Link naar de openbare trello](https://trello.com/b/w60wkKSU/examen-paraphrenia)
 
 ## Product 10: Gitflow conventions
-
-Je hebt voor je eigen project in je readme gitflow conventies opgesteld en je hier ook aantoonbaar aan gehouden. 
-
-De gitflow conventions gaan uit van een extra branch Develop naast de "Master"/"Main". Op de main worden alleen stabiele releases gezet.
-
-Verder worden features op een daarvoor bedoelde feature banch ontwikkeld. Ook kun je gebruik maken van een hotfix brancg vanaf develop.
-
-Leg hier uit welke branches jij gaat gebruiken en wat voor namen je hier aan gaat meegeven. Hoe vaak ga je comitten en wat voor commit messages wil je geven?
-
-Meer info over het gebruiken van gitflow [hier](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
