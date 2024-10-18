@@ -165,7 +165,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  movespeed: 10
+  movespeed: 3
 --- !u!61 &3959508557584579962
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -91,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4125021926212567678}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 825c7f637ee63f642b5ee7b79f54e6f5, type: 3}
   m_Name: 
@@ -197,9 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2202eb6134dd7ca409d4ebc50b3045ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathLayer:
+  PathLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!61 &-5653955715230857859
 BoxCollider2D:
   m_ObjectHideFlags: 0
