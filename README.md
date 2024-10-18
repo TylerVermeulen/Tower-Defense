@@ -25,9 +25,7 @@ Dit is de [ROOT](/Tower%20Defense/) folder van mijn unity project.
 
 ## Product 3: Build op Github
 
-Je maakt in Unity een stabiele “build” van je game waarbij bugs en logs eerst zijn verwijderd. Deze buildfiles upload je in je repository onder releases.  Bij eventuele afwijkingen moeten deze worden gedocumenteerd in de release. (Bijv controller nodig of spelen via netwerk etc..) 
-
-[Release Voorbeeld](https://github.com/erwinhenraat/TowerDefenseTemplate/releases)
+[Here is the Build](https://github.com/TylerVermeulen/Tower-Defense/releases/tag/final)
 
 ## Product 4: Game met Sprites(animations) en Textures 
 
@@ -71,9 +69,6 @@ hij loopt richting het eindpunt met behulp van een waypoint systeem de manier da
 *Onderbouwing hier...*
 
 ## Product 7: Class Diagram voor volledige codebase 
-
-Je brengt je volledige codebase in kaart met behulp van een class diagram. Binnen de classes hoeven geen private members te worden weergegeven. Wel alle public members (fields en methods). Ook geef je indien relevant de relaties tussen je classes weer. Je class diagram plaats je in je readme op github. Evt mag je dit doen m.b.v de [“Mermaid”](https://mermaid.js.org/syntax/classDiagram.html) tool.
-
 
 ```mermaid
 ---
