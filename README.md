@@ -29,7 +29,7 @@ Dit is de [ROOT](/Tower%20Defense/) folder van mijn unity project.
 
 ## Product 4: Game met Sprites(animations) en Textures 
 
-![Textures Sprites](readmeVisuals/texturesSprites.gif)
+![Textures Sprites](readmeVisuals/BoDemoGif.gif)
 
 ## Product 5: Issues met debug screenshots op GitHub 
 
