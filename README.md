@@ -1,7 +1,4 @@
-# TowerDefenseTemplate
-
-
- **Verwijder uiteindelijk de template teksten!**
+# TowerDefense
 
 Dit is mijn BO voor periode 1 jaar 2 bij MediaCollege Amsterdam.
 De opdracht hier was een tower defense maken die aan een paar requirements voldoen.
@@ -37,7 +34,7 @@ Dit is de [ROOT](/Tower%20Defense/) folder van mijn unity project.
 
 ## Product 6: Game design met onderbouwing 
 
-![Hier de link naar mijn Design Doc](/PlayabilityAndReplayability/README.MD)
+[Hier de link naar mijn Design Doc](/PlayabilityAndReplayability/README.MD)
 
 *  **Je game bevat torens die kunnen mikken en schieten op een bewegend doel.** 
 
@@ -50,7 +47,7 @@ hij loopt richting het eindpunt met behulp van een waypoint systeem de manier da
 
 *  **Je game bevat een “wave” systeem waarmee er onder bepaalde voorwaarden (tijd/vijanden op) nieuwe waves met vijanden het veld in komen.**
 
-*Onderbouwing hier...*
+*Niet Gedaan*
 
 *  **Een “health” systeem waarmee je levens kunt verliezen als vijanden hun doel bereiken en zodoende het spel kunt verliezen.** 
 
@@ -58,15 +55,15 @@ hij loopt richting het eindpunt met behulp van een waypoint systeem de manier da
 
 *  **Een “resource” systeem waarmee je resources kunt verdienen waarmee je torens kunt kopen en .evt upgraden.**
 
-*Onderbouwing hier...*
+*Niet Gedaan*
 
 *  **Een “upgrade” systeem om je torens te verbeteren.**
 
-*Onderbouwing hier...*
+*Niet Gedaan*
 
 *  **Een “movement prediction” systeem waarmee je kan berekenen waar een toren heen moeten schieten om een bewegend object te kunnen raken. (Moeilijk)**
 
-*Onderbouwing hier...*
+*Niet Gedaan*
 
 ## Product 7: Class Diagram voor volledige codebase 
 
@@ -162,9 +159,12 @@ TowerSpawner <.. Drag
 
 ## Product 8: Prototype test video
 
+Niet Gedaan
+
 ## Product 9: SCRUM planning inschatting 
 
 [Link naar de openbare trello](https://trello.com/b/w60wkKSU/examen-paraphrenia)
 
 ## Product 10: Gitflow conventions
 
+Niet Gedaan
