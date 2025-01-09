@@ -168,3 +168,6 @@ Niet Gedaan
 ## Product 10: Gitflow conventions
 
 Niet Gedaan
+
+
+![Visual Sheet](ReadmeImages/TowerDefenseVisualSheet.png)

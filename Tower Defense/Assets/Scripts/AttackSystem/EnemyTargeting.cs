@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyTargeting : MonoBehaviour
 {
-    
     [SerializeField]private List<GameObject> EnemiesInRange = new List<GameObject>();
     [SerializeField]internal GameObject target;
     [SerializeField]private GameObject Bullet;
